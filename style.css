@@ -1,0 +1,413 @@
+@font-face {
+    font-family: corbel_normal;
+    src: local("corbel"), url(/font/corbel.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: corbel_bold;
+    src: local("corbel"), url(/font/corbel.ttf) format("opentype");
+    font-weight: bold;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: corbel_bold, sans-serif, "微軟正黑體";
+}
+
+.section {
+    width: 100%;
+    padding: 26px;
+    box-sizing: border-box;
+}
+
+#home-section {
+    /*background-color: #53aec6;*/
+    background-color: #ABFFAB;
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    transition: background-color ease 0.8s;
+}
+
+#nav>ul {
+    display: flex;
+}
+
+.nav_item {
+    font-size: 21px;
+    list-style: none;
+    padding: 0 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.nav_item:hover:after,
+.nav_active:after {
+    background-color: white;
+}
+
+.nav_item::after {
+    height: 3px;
+    width: 100%;
+    display: block;
+    content: "";
+    transition: background-color ease 1s;
+}
+
+.solgan {
+    color: white;
+    font-weight: 400;
+    text-align: center;
+    margin: 0px auto;
+    font-family: corbel_normal;
+    font-size: 37px;
+    font-weight: initial;
+    margin: 0;
+}
+
+#head {
+    padding-top: 50px;
+    display: block;
+    margin: auto;
+    max-width: 378px;
+    border-radius: 50%;
+    /*圖片本身的實際寬度尺寸*/
+}
+
+#circles-wrapper {
+    position: absolute;
+    bottom: 10vw;
+    right: 10vw;
+}
+
+.info-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    border: 2px solid white;
+    display: inline-block;
+    font-size: 26px;
+    text-align: center;
+    color: white;
+    margin: 11px;
+    cursor: pointer;
+}
+
+.info-circle>i {
+    margin-top: 10px;
+}
+
+.info-circle:hover {
+    color: #036b87;
+    border-color: #036b87;
+}
+
+#email_dialog {
+    position: relative;
+    top: -11px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: none;
+    font-size: 15px;
+}
+
+#email_dialog:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: white transparent transparent transparent;
+    position: absolute;
+    bottom: -9px;
+    right: 27px;
+}
+
+/*ABOUT*/
+
+#about-section {
+    color: white;
+    background-color: #8dc2d0;
+}
+
+.section-title {
+    margin: 0;
+    text-align: center;
+    font-size: 78px;
+    margin-top: 20px;
+    /*padding: 26px 0 10px 0;*/
+}
+
+.article {
+    padding: 55px;
+}
+
+.about-secondary-color {
+    color: rgb(255, 255, 255);
+    background-color: rgb(253, 253, 253);
+}
+
+.article-line {
+    height: 8px;
+    border-width: 0;
+    color: inherit;
+    width: 60px;
+    background-color: inherit;
+    /*hr置左*/
+    margin-left: 0;
+    text-align: left;
+}
+
+.article-title {
+    font-size: 32px;
+    margin: 0;
+    margin-top: -3px;
+}
+
+#article-list {
+    list-style-type: none;
+}
+
+#article-list>li,
+.article-content>p {
+    font-size: 30px;
+}
+
+#ntu-logo {
+    display: inline-block;
+    height: 100px;
+    vertical-align: middle;
+    padding-right: 15px;
+}
+
+/*ntuwvs*/
+
+#ntuwvs-section {
+    color: #333333;
+    background-color: #eaeaea;
+}
+
+.wrapper {
+    height: 28px;
+    display: flex;
+}
+
+.chart-bar {
+    height: inherit;
+    flex: 1 1 auto;
+}
+
+.skill-level {
+    height: inherit;
+    flex: 0 0 115px;
+    margin-left: 26px;
+    font-size: 21px;
+    line-height: 28px;
+}
+
+.flexslider {
+    slideshowSpeed: 5000; //展示时间间隔ms
+    animationSpeed: 500; //滚动时间ms
+    touch: true;
+}
+
+.slides {
+    slideshowSpeed: 5000; //展示时间间隔ms
+    animationSpeed: 500; //滚动时间ms
+    touch: true;
+}
+
+.slider_container {
+    margin: 30px auto;
+    width: 750px;
+    height: 500px;
+    position: relative;
+    border: 20px solid;
+    border-color: #fff;
+    border-bottom-width: 100px;
+    background-color: #f5f5f5;
+    box-shadow: #666 0 0 5px;
+}
+
+.slider_container div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.slider_container div {
+    -webkit-animation: round 15s linear infinite;
+    animation: round 15s linear infinite;
+}
+
+@-webkit-keyframes round {
+    6.6% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        /* 0 - 1秒 淡入*/
+    }
+    33% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        /* 1- 5秒靜止*/
+    }
+    39.6% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        /* 5-6秒淡出*/
+    }
+}
+
+@keyframes round {
+    6.6% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        /* 0 - 1秒 淡入*/
+    }
+    33% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        /* 1- 5秒靜止*/
+    }
+    39.6% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        /* 5-6秒淡出*/
+    }
+}
+
+.slider_container div:nth-child(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+.slider_container div:nth-child(2) {
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+}
+
+.slider_container div:nth-child(3) {
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+}
+
+.slider_container span {
+    color: #000;
+    background: #fff;
+    opacity: 0.5;
+    position: absolute;
+    left: 0%;
+    top: 280px;
+    width: 400px;
+    height: 100px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 100px;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.slider_container:hover span {
+    width: 100%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+}
+
+.slider_container:hover div {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+/*--------------activity start-----------------------*/
+
+#activity-section {
+    background-color: #fafafa;
+    color: #333333;
+}
+
+.works-secondary-color {
+    color: #E57373;
+    background-color: #E57373;
+}
+
+.works-intro {
+    font-size: 20px;
+}
+
+.works-skill {
+    font-size: 16px;
+}
+
+.pic>a {
+    color: #333333;
+}
+
+.works-img {
+    height: 80px;
+}
+
+.web-app-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.web-app-content>.pic {
+    margin: 80px;
+    margin-bottom: 0;
+    width: calc(50% - 160px);
+}
+
+.roader-intro {
+    flex-wrap: nowrap;
+    margin: 70px 0;
+}
+
+.roader-demo-img {
+    margin: 60px 20px 0;
+    width: calc(100%/3);
+    display: inline-block;
+}
+
+/*scroll bar css*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #FFF;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #CCC;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #AAA;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #888;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
