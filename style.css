@@ -32,40 +32,6 @@ html {
     justify-content: center;
 }
 
-#nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 3;
-    transition: background-color ease 0.8s;
-}
-
-#nav>ul {
-    display: flex;
-}
-
-.nav_item {
-    font-size: 21px;
-    list-style: none;
-    padding: 0 10px;
-    color: white;
-    cursor: pointer;
-}
-
-.nav_item:hover:after,
-.nav_active:after {
-    background-color: white;
-}
-
-.nav_item::after {
-    height: 3px;
-    width: 100%;
-    display: block;
-    content: "";
-    transition: background-color ease 1s;
-}
-
 .solgan {
     color: white;
     font-weight: 400;
