@@ -32,7 +32,7 @@ html {
 }
 
 #home-section-wvs {
-    background-image: url("/pic/wvs08.png");
+    background-image: url('https://imgur.com/4EW3XNg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -43,7 +43,7 @@ html {
 }
 
 #home-section-act {
-    background-image: url("/pic/wvsbg.png");
+    background-image: url('https://imgur.com/CkQSpkE');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -54,7 +54,7 @@ html {
 }
 
 #home-section-about {
-    background-image: url("/pic/sing01.png");
+    background-image: url('https://imgur.com/UbUUa07');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
