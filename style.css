@@ -23,8 +23,40 @@ html {
 }
 
 #home-section {
-    /*background-color: #53aec6;*/
     background-color: #ABFFAB;
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home-section-wvs {
+    background-image: url("/pic/wvs08.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home-section-act {
+    background-image: url("/pic/wvsbg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home-section-about {
+    background-image: url("/pic/sing01.png");
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 100vh;
     padding: 0;
     display: flex;
@@ -459,4 +491,38 @@ html {
 ::-webkit-scrollbar-thumb:active {
     background: #888;
     -webkit-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+//回到頂端
+.back-to-top {
+    display: none;
+    /* 默認是隱藏的，這樣在第一屏才不顯示 */
+    position: fixed;
+    /* 位置是固定的 */
+    bottom: 20px;
+    /* 顯示在頁面底部 */
+    right: 30px;
+    /* 顯示在頁面的右邊 */
+    z-index: 99;
+    /* 確保不被其他功能覆蓋 */
+    border: 1px solid #5cb85c;
+    /* 顯示邊框 */
+    outline: none;
+    /* 不顯示外框 */
+    background-color: rgba(145, 136, 136, 0.863);
+    /* 設置背景背景顏色 */
+    color: #5cb85c;
+    /* 設置文本顏色 */
+    cursor: pointer;
+    /* 滑鼠移到按鈕上顯示手型 */
+    padding: 10px 15px 15px 15px;
+    /* 增加一些內邊距 */
+    border-radius: 10px;
+    /* 增加圓角 */
+}
+
+.back-to-top:hover {
+    background-color: #5cb85c;
+    /* 滑鼠移上去時，反轉顏色 */
+    color: rgb(253, 252, 252);
 }
