@@ -34,50 +34,56 @@
 </head>
 
 <body>
-    <ul class="nav nav-tabs">
-        <li class="active">
-            <a href="/index.html">Home</a>
-        </li>
-        <li>
-            <a href="/about.html">ABOUT</a>
-        </li>
-        <li>
-            <a href="">NTUWVS</a>
-        </li>
-        <li>
-            <a href="#">ACTIVITY</a>
-        </li>
-    </ul>
-    <section class="section" id="home-section">
-        <nav id="nav">
-            <ul>
-                <li class="nav_item" data-page="#home-section">HOME</li>
-                <li class="nav_item" data-page="#about-section">ABOUT</li>
-                <li class="nav_item" data-page="#ntuwvs-section">NTUWVS</li>
-                <li class="nav_item" data-page="#activity-section">ACTIVITY</li>
-            </ul>
-        </nav>
-        <span id="center-wrapper">
-            <h3 class="solgan">Hello , I am Jacky Hsu</h3>
-            <img id="head" src="pic/sing.png">
-            <h3 class="solgan">Just try it !</h3>
-        </span>
-        <div id="circles-wrapper">
-            <div id="email_dialog">
-                jacky12463890@gmail.com
-            </div>
-            <a href="https://www.facebook.com/Jackyyoyoyo">
+    <!--TODO:置頂導覽列-如何靠右?-->
+    <nav class="nav">
+
+        <ul>
+            <li class="current">
+                <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/about.html">ABOUT</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/wvs.html">NTUWVS</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/act.html">ACTIVITY</a>
+            </li>
+            <a href="https://www.facebook.com/Jackyyoyoyo" float:right>
                 <div class="info-circle">
                     <i class="fab fa-facebook-f" ari-alla-hidden="true"></i>
                 </div>
             </a>
-            <a href="mailto:jacky12463890@gmail.com">
+            <a href="mailto:jacky12463890@gmail.com" float:right>
                 <div class="info-circle" id="email">
                     <i class="fa fa-envelope-o" aria-hidden="true"></i>
 
                 </div>
             </a>
+        </ul>
+    </nav>
+    <span id="center-wrapper">
+        <h3 class="solgan">Hello , I am Jacky Hsu</h3>
+        <img id="head" src="pic/sing.png">
+        <h3 class="solgan">Just try it !</h3>
+    </span>
+    <div id="circles-wrapper">
+        <div id="email_dialog">
+            jacky12463890@gmail.com
         </div>
+        <a href="https://www.facebook.com/Jackyyoyoyo">
+            <div class="info-circle">
+                <i class="fab fa-facebook-f" ari-alla-hidden="true"></i>
+            </div>
+        </a>
+        <a href="mailto:jacky12463890@gmail.com">
+            <div class="info-circle" id="email">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+
+            </div>
+        </a>
+    </div>
 
     </section>
 
